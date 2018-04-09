@@ -12,27 +12,36 @@ import Foundation
 struct Guest : Codable {
     var name : String
     var number : String
+    var avatar : String
     
     //init guest if name and number are both present
-    init?(name: String?, number: String?) {
+    init?(name: String?, number: String?, avatar: String?) {
         
         //return without creating object if either field is nil
-        if name == nil || number == nil {
+        if name == nil || number == nil || avatar == nil {
             return nil
         }
         
         //else update the object
         self.name = name!
         self.number = number!
+        self.avatar = avatar!
     }
     
 } //end guest
+
 
 //load the guests array from the local database
 //if nil, start with an empty array
 var Guests : [Guest] = loadData() ?? []
 
-//function to get a path to the json file
+
+
+
+
+
+
+//function to get a path to the json folder
 func getDocumentsURL() -> URL {
     if let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first {
         return url
@@ -42,7 +51,7 @@ func getDocumentsURL() -> URL {
 }
 
 //this saves the 'Guests' array to a json file on the iPhone's cache directory
-func saveData() -> Bool
+func saveData()
 {
     //create a path to the json file
     let url = getDocumentsURL().appendingPathComponent("data.json")
@@ -55,11 +64,9 @@ func saveData() -> Bool
         try data.write(to: url, options: [])
         
     } catch {
-        return false
         //fatalError(error.localizedDescription)
     }
     
-    return true
 }
 
 

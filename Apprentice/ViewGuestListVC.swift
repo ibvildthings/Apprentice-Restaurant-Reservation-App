@@ -47,6 +47,11 @@ class GuestListViewController: UIViewController, UITableViewDelegate, UITableVie
         //update the labels
         cell.textLabel?.text = Guests[indexPath.row].name
         cell.detailTextLabel?.text = Guests[indexPath.row].number
+        
+        //try to retrive the image if that fails, use the default image
+        let avatar = getImage(withName: Guests[indexPath.row].avatar) ?? #imageLiteral(resourceName: "default-avatar")
+        cell.imageView?.image = avatar
+        
         return cell
     }
     
@@ -55,6 +60,7 @@ class GuestListViewController: UIViewController, UITableViewDelegate, UITableVie
         if(indexPath.row >= 0 && indexPath.row < Guests.count)
         {
             let phoneNumber: String = "tel://" + Guests[indexPath.row].number
+            
             UIApplication.shared.openURL(URL(string: phoneNumber)!)
         }
     }
@@ -62,6 +68,7 @@ class GuestListViewController: UIViewController, UITableViewDelegate, UITableVie
     // Override to support editing the table view.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
             // Delete the row from the data source
             Guests.remove(at: indexPath.row)
             saveData()
@@ -74,6 +81,8 @@ class GuestListViewController: UIViewController, UITableViewDelegate, UITableVie
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
+    
+    
     
 
 }

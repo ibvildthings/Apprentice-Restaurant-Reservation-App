@@ -14,7 +14,19 @@
 		7B22CB782076BB3C00E020B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B22CB762076BB3C00E020B3 /* Main.storyboard */; };
 		7B22CB7A2076BB6100E020B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B22CB792076BB6100E020B3 /* Assets.xcassets */; };
 		7B22CB7D2076BB6100E020B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B22CB7B2076BB6100E020B3 /* LaunchScreen.storyboard */; };
+		7B24C7B6207B101700446E42 /* ApprenticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B24C7B5207B101700446E42 /* ApprenticeTests.swift */; };
+		7B24C7BE207B857400446E42 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B24C7BD207B857400446E42 /* ImageUtilities.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B24C7B8207B101700446E42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B22CB672076BB3C00E020B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B22CB6E2076BB3C00E020B3;
+			remoteInfo = Apprentice;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7B167BCF2077348200A49A29 /* GuestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestModel.swift; sourceTree = "<group>"; };
@@ -26,10 +38,21 @@
 		7B22CB792076BB6100E020B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B22CB7C2076BB6100E020B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B22CB7E2076BB6100E020B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B24C7B3207B101600446E42 /* ApprenticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprenticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B24C7B5207B101700446E42 /* ApprenticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprenticeTests.swift; sourceTree = "<group>"; };
+		7B24C7B7207B101700446E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B24C7BD207B857400446E42 /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7B22CB6C2076BB3C00E020B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B24C7B0207B101600446E42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				7B22CB712076BB3C00E020B3 /* Apprentice */,
+				7B24C7B4207B101700446E42 /* ApprenticeTests */,
 				7B22CB702076BB3C00E020B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				7B22CB6F2076BB3C00E020B3 /* Apprentice.app */,
+				7B24C7B3207B101600446E42 /* ApprenticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,14 +85,24 @@
 			children = (
 				7B22CB7E2076BB6100E020B3 /* Info.plist */,
 				7B22CB722076BB3C00E020B3 /* AppDelegate.swift */,
-				7B167BD1207741F000A49A29 /* ViewGuestListVC.swift */,
-				7B167BCF2077348200A49A29 /* GuestModel.swift */,
 				7B22CB742076BB3C00E020B3 /* AddGuestVC.swift */,
+				7B167BCF2077348200A49A29 /* GuestModel.swift */,
+				7B167BD1207741F000A49A29 /* ViewGuestListVC.swift */,
+				7B24C7BD207B857400446E42 /* ImageUtilities.swift */,
+				7B22CB762076BB3C00E020B3 /* Main.storyboard */,
 				7B22CB792076BB6100E020B3 /* Assets.xcassets */,
 				7B22CB7B2076BB6100E020B3 /* LaunchScreen.storyboard */,
-				7B22CB762076BB3C00E020B3 /* Main.storyboard */,
 			);
 			path = Apprentice;
+			sourceTree = "<group>";
+		};
+		7B24C7B4207B101700446E42 /* ApprenticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B24C7B5207B101700446E42 /* ApprenticeTests.swift */,
+				7B24C7B7207B101700446E42 /* Info.plist */,
+			);
+			path = ApprenticeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +125,24 @@
 			productReference = 7B22CB6F2076BB3C00E020B3 /* Apprentice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7B24C7B2207B101600446E42 /* ApprenticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B24C7BC207B101700446E42 /* Build configuration list for PBXNativeTarget "ApprenticeTests" */;
+			buildPhases = (
+				7B24C7AF207B101600446E42 /* Sources */,
+				7B24C7B0207B101600446E42 /* Frameworks */,
+				7B24C7B1207B101600446E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B24C7B9207B101700446E42 /* PBXTargetDependency */,
+			);
+			name = ApprenticeTests;
+			productName = ApprenticeTests;
+			productReference = 7B24C7B3207B101600446E42 /* ApprenticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +155,10 @@
 				TargetAttributes = {
 					7B22CB6E2076BB3C00E020B3 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					7B24C7B2207B101600446E42 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 7B22CB6E2076BB3C00E020B3;
 					};
 				};
 			};
@@ -119,6 +176,7 @@
 			projectRoot = "";
 			targets = (
 				7B22CB6E2076BB3C00E020B3 /* Apprentice */,
+				7B24C7B2207B101600446E42 /* ApprenticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +192,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B24C7B1207B101600446E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -143,12 +208,29 @@
 			files = (
 				7B22CB752076BB3C00E020B3 /* AddGuestVC.swift in Sources */,
 				7B22CB732076BB3C00E020B3 /* AppDelegate.swift in Sources */,
+				7B24C7BE207B857400446E42 /* ImageUtilities.swift in Sources */,
 				7B167BD02077348200A49A29 /* GuestModel.swift in Sources */,
 				7B167BD2207741F100A49A29 /* ViewGuestListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B24C7AF207B101600446E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B24C7B6207B101700446E42 /* ApprenticeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B24C7B9207B101700446E42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B22CB6E2076BB3C00E020B3 /* Apprentice */;
+			targetProxy = 7B24C7B8207B101700446E42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7B22CB762076BB3C00E020B3 /* Main.storyboard */ = {
@@ -320,6 +402,46 @@
 			};
 			name = Release;
 		};
+		7B24C7BA207B101700446E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8MS5YZENK;
+				INFOPLIST_FILE = ApprenticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.littlemaxima.ApprenticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Apprentice.app/Apprentice";
+			};
+			name = Debug;
+		};
+		7B24C7BB207B101700446E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8MS5YZENK;
+				INFOPLIST_FILE = ApprenticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.littlemaxima.ApprenticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Apprentice.app/Apprentice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -337,6 +459,15 @@
 			buildConfigurations = (
 				7B22CB8D2076BB6200E020B3 /* Debug */,
 				7B22CB8E2076BB6200E020B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B24C7BC207B101700446E42 /* Build configuration list for PBXNativeTarget "ApprenticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B24C7BA207B101700446E42 /* Debug */,
+				7B24C7BB207B101700446E42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
